@@ -1,0 +1,25 @@
+
+<div class="name">
+    <a *ngIf="hasChildren(node)" (click)="toggleOpen(node)" >
+        <fa-icon *ngIf="!node.open" [icon]="faPlus"></fa-icon>
+        <fa-icon *ngIf="node.open" [icon]="faMinus"></fa-icon>
+    </a>
+
+    <a (click)="toggleOpen(node)">
+       <div class="line" [ngClass]="hasChildren(node) ? 'children' : ''"></div> {{node.name}}
+    </a>
+    <div class="add-btn" *ngIf="!adding">
+        <button (click)="addNode(node)" class="btn btn-primary">Add</button>
+        <button (click)="removeNode(node)" class="btn btn-danger">Remove</button> 
+    </div>
+    <div class="add-btn" *ngIf="adding">
+        <input [(ngModel)]="inputdata" class="form-control" />
+        <button (click)="confirmAdding(node)"  class="btn btn-primary">Add</button>
+        <button (click)="cancelAdding(node)"  class="btn btn-danger">Cancel</button>
+    </div>
+    
+</div>
+<tree *ngIf="node.open && hasChildren(node)" [dataSource]="node.children">
+
+</tree>
+

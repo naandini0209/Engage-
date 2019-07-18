@@ -1,0 +1,22 @@
+tree-node {
+    display: block;
+    padding-left: 15px;
+    border-left: 1px dotted;
+    margin-left: 15px;
+    position: relative;
+}
+
+tree-node:last-child::after {
+    display: block;
+    content: " ";
+    background: white;
+    width: 10px;
+    height: 1000px;
+    position: absolute;
+    top: 24px;
+    left: -2px;
+}
+
+.name {
+    color: blue;
+}

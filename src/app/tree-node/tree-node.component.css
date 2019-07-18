@@ -1,0 +1,46 @@
+.name {
+    margin-bottom: 0;
+    line-height: 45px;
+}
+
+.add-btn {
+    /* display: none; */
+    display: inline-block;
+}
+
+.add-btn>* {
+    margin-left: 10px;
+    float: left;
+}
+
+.add-btn>input {
+    width: 200px;
+}
+
+.name:hover .add-btn {
+    display: inline-block;
+}
+
+tree-node {
+    display: block;
+}
+
+a {
+    cursor: pointer;
+    float: left;
+    padding-left: 10px;
+    position: relative;
+}
+
+.line {
+    height: 1px;
+    border-top: 1px dotted;
+    position: absolute;
+    top: 23px;
+    width: 20px;
+    left: -16px;
+}
+
+.line.children {
+    left: -40px;
+}
